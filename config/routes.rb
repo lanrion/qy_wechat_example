@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'qy_accounts#index'
+  root 'qy_apps#index'
 
-  resources :qy_accounts
+  resources :qy_apps
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

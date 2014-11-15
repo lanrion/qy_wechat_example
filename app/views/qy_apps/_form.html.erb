@@ -1,10 +1,10 @@
-<%= form_for(@qy_account) do |f| %>
-  <% if @qy_account.errors.any? %>
+<%= form_for(@qy_app) do |f| %>
+  <% if @qy_app.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@qy_account.errors.count, "error") %> prohibited this qy_account from being saved:</h2>
+      <h2><%= pluralize(@qy_app.errors.count, "error") %> prohibited this qy_app from being saved:</h2>
 
       <ul>
-      <% @qy_account.errors.full_messages.each do |message| %>
+      <% @qy_app.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

@@ -1,0 +1,27 @@
+<h1>Listing qy_apps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @qy_apps.each do |qy_app| %>
+      <tr>
+        <td><%= qy_app.name %></td>
+        <td><%= qy_wechat_engine.qy_verify_url(qy_app.qy_secret_key) %></td>
+        <td><%= link_to 'Show', qy_app %></td>
+        <td><%= link_to 'Edit', edit_qy_app_path(qy_app) %></td>
+        <td><%= link_to 'Destroy', qy_app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Qy app', new_qy_app_path %>

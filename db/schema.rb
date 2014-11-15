@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20141106133837) do
 
-  create_table "qy_accounts", force: true do |t|
+  create_table "qy_apps", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 20141106133837) do
     t.string   "qy_secret_key"
   end
 
-  add_index "qy_accounts", ["corp_id"], name: "index_qy_accounts_on_corp_id"
-  add_index "qy_accounts", ["encoding_aes_key"], name: "index_qy_accounts_on_encoding_aes_key"
-  add_index "qy_accounts", ["qy_secret_key"], name: "index_qy_accounts_on_qy_secret_key"
-  add_index "qy_accounts", ["qy_token"], name: "index_qy_accounts_on_qy_token"
+  add_index "qy_apps", ["corp_id"], name: "index_qy_apps_on_corp_id"
+  add_index "qy_apps", ["encoding_aes_key"], name: "index_qy_apps_on_encoding_aes_key"
+  add_index "qy_apps", ["qy_secret_key"], name: "index_qy_apps_on_qy_secret_key"
+  add_index "qy_apps", ["qy_token"], name: "index_qy_apps_on_qy_token"
 
 end
