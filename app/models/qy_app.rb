@@ -1,4 +1,4 @@
-class QyAccount < ActiveRecord::Base
+class QyApp < ActiveRecord::Base
 
   before_create :init_qy_secret_key
 
