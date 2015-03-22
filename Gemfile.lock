@@ -1,12 +1,23 @@
-PATH
-  remote: /Users/lanrion/Projects/jobs/mooogo/qy_wechat
+GIT
+  remote: https://github.com/lanrion/qy_wechat.git
+  revision: 10364eb4ad73e269cabab995e447b7207d4a8395
+  branch: master
   specs:
-    qy_wechat (1.0.0.beta1)
+    qy_wechat (1.0.1)
       multi_xml (>= 0.5.2)
       nokogiri (>= 1.6.1)
       rails (>= 3.1)
       railties (>= 3.1)
       roxml
+
+PATH
+  remote: /Users/lanrion/Projects/mygems/qy_wechat_api
+  specs:
+    qy_wechat_api (1.0.0.beta1)
+      carrierwave (~> 0.10.0)
+      mini_magick (~> 3.7.0)
+      rest-client (>= 1.6.7)
+      yajl-ruby (~> 1.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -39,6 +50,16 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     builder (3.2.2)
+    byebug (3.5.1)
+      columnize (~> 0.8)
+      debugger-linecache (~> 1.2)
+      slop (~> 3.6)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
+    coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -46,7 +67,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    columnize (0.9.0)
+    daemons (1.2.1)
+    debugger-linecache (1.2.0)
     erubis (2.7.0)
+    eventmachine (1.0.7)
     execjs (2.2.2)
     hike (1.2.3)
     i18n (0.6.11)
@@ -60,14 +85,29 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.2)
     mime-types (1.25.1)
-    mini_portile (0.6.1)
+    mini_magick (3.7.0)
+      subexec (~> 0.2.1)
+    mini_portile (0.6.2)
     minitest (5.4.2)
     multi_json (1.10.1)
     multi_xml (0.5.5)
-    nokogiri (1.6.4.1)
+    netrc (0.10.3)
+    nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     polyglot (0.3.5)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-byebug (3.0.1)
+      byebug (~> 3.4)
+      pry (~> 0.10)
+    pry-rails (0.3.3)
+      pry (>= 0.9.10)
+    quiet_assets (1.1.0)
+      railties (>= 3.1, < 5.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -89,6 +129,9 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    rest-client (1.7.3)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     roxml (3.3.1)
       activesupport (>= 2.3.0)
       nokogiri (>= 1.3.3)
@@ -101,6 +144,7 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    slop (3.6.0)
     spring (1.1.3)
     sprockets (2.11.3)
       hike (~> 1.2)
@@ -112,6 +156,11 @@ GEM
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.10)
+    subexec (0.2.3)
+    thin (1.6.3)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0)
+      rack (~> 1.0)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
@@ -125,6 +174,7 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -133,11 +183,16 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  pry-byebug
+  pry-rails
+  quiet_assets
   qy_wechat!
+  qy_wechat_api!
   rails (= 4.1.4)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
   sqlite3
+  thin
   turbolinks
   uglifier (>= 1.3.0)

@@ -27,6 +27,18 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'qy_wechat', git: 'https://github.com/lanrion/qy_wechat.git', branch: :master
+
+gem 'qy_wechat_api', path: "/Users/lanrion/Projects/mygems/qy_wechat_api"
+
+gem "quiet_assets"
+
+gem 'thin'
+
+gem 'pry-byebug'
+
+gem 'pry-rails'
+
+
 # gem 'qy_wechat', path: "/Users/lanrion/Projects/mygems/qy_wechat"
 
 # Use ActiveModel has_secure_password

@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+
   mount QyWechat::Engine, at: "/"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'qy_apps#index'
+
+  resources :qy_services, only: :receive_ticket do
+    post :receive_ticket, on: :collection
+  end
 
   resources :qy_apps
 
