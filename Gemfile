@@ -28,7 +28,7 @@ gem 'spring',        group: :development
 
 gem 'qy_wechat', git: 'https://github.com/lanrion/qy_wechat.git', branch: :master
 
-gem 'qy_wechat_api', path: "/Users/lanrion/Projects/mygems/qy_wechat_api"
+gem 'qy_wechat_api'
 
 gem "quiet_assets"
 
