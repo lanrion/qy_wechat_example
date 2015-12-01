@@ -1,16 +1,15 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.4'
+gem 'rails', '~> 4.1.12'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 5.0.3'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 2.7'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
@@ -19,25 +18,21 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
+gem 'jbuilder', '~> 2.3'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+gem 'spring', group: :development, platform: :ruby
 
 gem 'qy_wechat', git: 'https://github.com/lanrion/qy_wechat.git', branch: :master
 
-gem 'qy_wechat_api'
+gem 'qy_wechat_api', git: 'https://github.com/lanrion/qy_wechat_api.git', branch: :master
 
-gem "quiet_assets"
-
-gem 'thin'
-
-gem 'pry-byebug'
-
-gem 'pry-rails'
-
+group :development do
+  gem 'quiet_assets'
+  gem 'byebug'
+end
 
 # gem 'qy_wechat', path: "/Users/lanrion/Projects/mygems/qy_wechat"
 
@@ -52,4 +47,3 @@ gem 'pry-rails'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

@@ -1,0 +1,18 @@
+{
+  "folders":
+  [
+    {
+      "path": ".",
+      "folder_exclude_patterns": [".bundle",".idea","bin","tmp","log","public/assets","public/fonts","app/assets/fonts"],
+      "file_exclude_patterns": ["*.sublime-workspace","*.sqlite3",
+                                "app/assets/javascripts/html5shiv.js","app/assets/javascripts/respond.min.js",
+                                "spec/examples.txt","public/favicon.ico"]
+    }
+  ],
+  "settings":
+  {
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true,
+    "tab_size": 2
+  }
+}
